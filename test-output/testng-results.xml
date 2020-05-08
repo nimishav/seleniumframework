@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="88156" started-at="2020-05-08T02:00:16Z" finished-at="2020-05-08T02:01:44Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="88156" started-at="2020-05-08T02:00:16Z" finished-at="2020-05-08T02:01:44Z">
+      <class name="com.training.sanity.tests.LoginTests">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="setUpBeforeClass" is-config="true" duration-ms="18" started-at="2020-05-07T22:00:16Z" finished-at="2020-05-07T22:00:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="setUp" is-config="true" duration-ms="14295" started-at="2020-05-07T22:00:16Z" finished-at="2020-05-07T22:00:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="ChangePasswordMSGTest()[pri:1, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="ChangePasswordMSGTest" duration-ms="8551" started-at="2020-05-07T22:00:30Z" finished-at="2020-05-07T22:00:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePasswordMSGTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="tearDown" is-config="true" duration-ms="2019" started-at="2020-05-07T22:00:39Z" finished-at="2020-05-07T22:00:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="setUp" is-config="true" duration-ms="12189" started-at="2020-05-07T22:00:41Z" finished-at="2020-05-07T22:00:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="RemoveItemFromCartTest()[pri:1, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="RemoveItemFromCartTest" duration-ms="17726" started-at="2020-05-07T22:00:53Z" finished-at="2020-05-07T22:01:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RemoveItemFromCartTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="tearDown" is-config="true" duration-ms="2116" started-at="2020-05-07T22:01:11Z" finished-at="2020-05-07T22:01:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="setUp" is-config="true" duration-ms="12288" started-at="2020-05-07T22:01:13Z" finished-at="2020-05-07T22:01:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="AddToCartTest()[pri:2, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="AddToCartTest" duration-ms="16811" started-at="2020-05-07T22:01:25Z" finished-at="2020-05-07T22:01:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCartTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@482f8f11]" name="tearDown" is-config="true" duration-ms="2095" started-at="2020-05-07T22:01:42Z" finished-at="2020-05-07T22:01:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.sanity.tests.LoginTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
