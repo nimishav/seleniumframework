@@ -51,7 +51,7 @@ public class LoginTests {
 		//To verify whether application displays error message upon mis matching password & 
 	    //confirm password of Change Your Password page
 		//***********************
-				@Test(priority =1, enabled=true)
+				@Test(priority =1, enabled=false)
 				public void ChangePasswordMSGTest() throws InterruptedException {
 			
 				loginPOM.MyAccountlinkClick();
@@ -112,14 +112,14 @@ public class LoginTests {
 				Thread.sleep(1000);
 				loginPOM.ViewCartClick();
 				screenShot.captureScreenShot("UFM_008_ViewCart02");
-				
+				loginPOM.cartWebTableValidate();
 				}
 		
 			//***************************
 			//UFM__009
 			//To verify whether application allows the user to remove added product details from cart
 			//***************************
-				@Test (priority =1, enabled=true)
+				@Test (priority =1, enabled=false)
 				public void RemoveItemFromCartTest() throws InterruptedException {
 					
 				loginPOM.MyAccountlinkClick();

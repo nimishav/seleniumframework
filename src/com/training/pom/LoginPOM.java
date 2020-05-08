@@ -225,7 +225,52 @@ public class LoginPOM {
 			
 		}
 		
-		public void cartWebTable() {
+		public void cartWebTableValidate() {
+			 
+	        String actual_thead1=driver.findElement(By.xpath("//table[@class='table table-bordered']//thead/tr[1]/td[1]")).getText(); 
+			String Image="Image";
+			org.testng.Assert.assertEquals(actual_thead1, Image);
+			
+			String actual_thead2=driver.findElement(By.xpath("//table[@class='table table-bordered']//thead/tr[1]/td[2]")).getText(); 
+			String Product_Name="Product Name";
+			org.testng.Assert.assertEquals(actual_thead2, Product_Name);
+			
+			String actual_thead3=driver.findElement(By.xpath("//table[@class='table table-bordered']//thead/tr[1]/td[3]")).getText(); 
+			String Model="Model";
+			org.testng.Assert.assertEquals(actual_thead3, Model);
+			
+			String actual_thead4=driver.findElement(By.xpath("//table[@class='table table-bordered']//thead/tr[1]/td[4]")).getText(); 
+			String Quantity="Quantity";
+			org.testng.Assert.assertEquals(actual_thead4, Quantity);
+			
+			String actual_thead5=driver.findElement(By.xpath("//table[@class='table table-bordered']//thead/tr[1]/td[5]")).getText(); 
+			String Unit_Price="Unit Price";
+			org.testng.Assert.assertEquals(actual_thead5, Unit_Price);
+			
+			String actual_thead6=driver.findElement(By.xpath("//table[@class='table table-bordered']//thead/tr[1]/td[6]")).getText(); 
+			String Total="Total";
+			org.testng.Assert.assertEquals(actual_thead6, Total);
+			
+			/*
+			Boolean Item1_image = driver.findElement(By.xpath("//table[@class='table table-bordered']//tbody/tr[1]/td[1]")).isDisplayed();    
+			org.testng.Assert.assertTrue(Item1_image);
+		
+			Boolean Item1_ProductName = driver.findElement(By.xpath("//table[@class='table table-bordered']//tbody/tr[1]/td[2]")).isDisplayed();
+			org.testng.Assert.assertTrue(Item1_ProductName);
+			
+			Boolean Item1_Model = driver.findElement(By.xpath("//table[@class='table table-bordered']//tbody/tr[1]/td[3]")).isDisplayed();      
+			org.testng.Assert.assertTrue(Item1_Model);
+			org.testng.Assert
+			
+			Boolean Item1_Quantity = driver.findElement(By.xpath("//table[@class='table table-bordered']//tbody/tr[1]/td[4]")).isDisplayed();      
+			org.testng.Assert.assertTrue(Item1_Quantity);
+	        
+			Boolean Item1_UnitPrice = driver.findElement(By.xpath("//table[@class='table table-bordered']//tbody/tr[1]/td[5]")).isDisplayed();      
+			org.testng.Assert.assertTrue(Item1_UnitPrice);
+			
+			Boolean Item1_Total = driver.findElement(By.xpath("//table[@class='table table-bordered']//tbody/tr[1]/td[6]")).isDisplayed();      
+			org.testng.Assert.assertTrue(Item1_Total);
+	        */	
 			
 		}
 }

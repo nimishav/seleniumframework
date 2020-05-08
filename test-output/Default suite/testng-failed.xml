@@ -7,7 +7,6 @@
         <methods>
           <include name="setUpBeforeClass"/>
           <include name="AddToCartTest"/>
-          <include name="RemoveItemFromCartTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
