@@ -202,6 +202,8 @@ public class LoginPOM {
 		private WebElement EmptyCart;
 		
 		
+		@FindBy(xpath="//div[@class='table-responsive']//table[@class='table table-bordered']")
+		private WebElement cartWebTable;
 		
 		public void CartClick() {
 			this.cart.click(); 
@@ -215,11 +217,16 @@ public class LoginPOM {
 			this.RemoveItemFromCart.click(); 
 		}
 		
+		
+		
 		public void UFM_009_Empty_Cart() {
 				Boolean EmptyCartMessage = EmptyCart.isDisplayed();      
 				org.testng.Assert.assertTrue(EmptyCartMessage);	
 			
 		}
 		
+		public void cartWebTable() {
+			
+		}
 }
 	
