@@ -19,6 +19,7 @@ public class LoginTests {
 
 	private WebDriver driver;
 	private String baseUrl;
+	private String loginURL;
 	private LoginPOM loginPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
@@ -32,12 +33,7 @@ public class LoginTests {
 
 	@BeforeMethod
 	public void setUp() throws Exception {
-		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		loginPOM = new LoginPOM(driver); 
-		baseUrl = properties.getProperty("baseURL");
-		screenShot = new ScreenShot(driver); 
-		// open the browser 
-		driver.get(baseUrl);
+		
 	}
 	
 	@AfterMethod
@@ -51,19 +47,26 @@ public class LoginTests {
 		//To verify whether application displays error message upon mis matching password & 
 	    //confirm password of Change Your Password page
 		//***********************
-				@Test(priority =1, enabled=false)
+				@Test(priority =1, enabled=true)
 				public void ChangePasswordMSGTest() throws InterruptedException {
-			
+
+				// open the browser
+				driver = DriverFactory.getDriver(DriverNames.CHROME);
+				loginPOM = new LoginPOM(driver); 
+				loginURL = properties.getProperty("loginURL");
+				screenShot = new ScreenShot(driver); 
+				driver.get(loginURL);	
+				Thread.sleep(1000);
 				loginPOM.MyAccountlinkClick();
 				Thread.sleep(1000);
 				loginPOM.loginlinkClick();	
-
+				Thread.sleep(2000);
 				//Login
 				loginPOM.sendemail("nimisha.vaidya@gmail.com");
 				loginPOM.sendPassword("ABCDEF123;");
 				loginPOM.clickLoginBtn(); 
 				screenShot.captureScreenShot("UFM_007_Login");
-				Thread.sleep(1000);
+				Thread.sleep(2000);
 				
 				//Change Password
 				loginPOM.clickchangPassword();
@@ -74,25 +77,37 @@ public class LoginTests {
 				screenShot.captureScreenShot("UFM_007_ChangePassword");
 				loginPOM.errmsg();
 				loginPOM.UFM_007();
+				
 				}
 
 		//***************************
 		//UFM__008
 		//To verify whether application allows the user to add product details into cart
 		//***************************
-				@Test(priority =2, enabled=true)
+				@Test(priority =1, enabled=true)
 				public void AddToCartTest() throws InterruptedException {
-					
+				
+				// open the browser
+				driver = DriverFactory.getDriver(DriverNames.CHROME);
+				loginPOM = new LoginPOM(driver); 
+				loginURL = properties.getProperty("loginURL");
+				screenShot = new ScreenShot(driver); 
+				driver.get(loginURL);	
+			
+				Thread.sleep(1000);	
 				loginPOM.MyAccountlinkClick();
 				Thread.sleep(1000);
 				loginPOM.loginlinkClick();
+				Thread.sleep(1000);
 				screenShot.captureScreenShot("UFM_008_loginlinkClick");
+				Thread.sleep(1000);
 		
 				//Login
 				Thread.sleep(1000);
 				loginPOM.sendemail("nimisha.vaidya@gmail.com");
 				loginPOM.sendPassword("ABCDEF123;");
 				loginPOM.clickLoginBtn(); 
+				Thread.sleep(2000);
 				screenShot.captureScreenShot("UFM_008_Login");
 				
 				Thread.sleep(1000);
@@ -113,25 +128,37 @@ public class LoginTests {
 				loginPOM.ViewCartClick();
 				screenShot.captureScreenShot("UFM_008_ViewCart02");
 				loginPOM.cartWebTableValidate();
+				
 				}
 		
+			 //***************************
+			      //UFM__009
+			   //To verify whether application allows the user to remove added product details from cart
 			//***************************
-			//UFM__009
-			//To verify whether application allows the user to remove added product details from cart
-			//***************************
-				@Test (priority =1, enabled=false)
+				@Test (priority =2, enabled=true)
 				public void RemoveItemFromCartTest() throws InterruptedException {
-					
+				
+				// open the browser
+				driver = DriverFactory.getDriver(DriverNames.CHROME);
+				loginPOM = new LoginPOM(driver); 
+				loginURL = properties.getProperty("loginURL");
+				screenShot = new ScreenShot(driver); 
+				driver.get(loginURL);	
+	
+				Thread.sleep(1000);	
 				loginPOM.MyAccountlinkClick();
 				Thread.sleep(1000);
 				loginPOM.loginlinkClick();
+				Thread.sleep(1000);
 				screenShot.captureScreenShot("UFM_009_loginlinkClick");
+				Thread.sleep(2000);
 
 				//Login
 				Thread.sleep(1000);
 				loginPOM.sendemail("nimisha.vaidya@gmail.com");
 				loginPOM.sendPassword("ABCDEF123;");
 				loginPOM.clickLoginBtn(); 
+				Thread.sleep(2000);
 				screenShot.captureScreenShot("UFM_009_Login");
 				
 				Thread.sleep(1000);
@@ -154,5 +181,6 @@ public class LoginTests {
 				loginPOM.RemoveItemFromCartClick();
 				loginPOM.UFM_009_Empty_Cart();
 				
-			}
+				}
+
 }
